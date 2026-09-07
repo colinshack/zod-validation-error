@@ -1,0 +1,12 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "zod-validation-error",
+  "description": "Wrap zod validation errors in user-friendly readable messages",
+  "excludeFolders": [".changeset"],
+  "rules": [
+    "For zod v4 import from 'zod-validation-error'. For zod v3 import from 'zod-validation-error/v3'. The two entry points are not interchangeable.",
+    "zod v4 uses the createErrorMap() factory, registered with zod.config({ customError: createErrorMap() }). zod v3 uses the static errorMap export, registered with zod.setErrorMap(errorMap). Neither the export nor the registration call is shared between them.",
+    "createMessageBuilder accepts forceTitleCase only on the zod v4 entry point.",
+    "README.md documents the zod v4 API and README.v3.md documents the zod v3 API. Both are current. Never combine examples from the two."
+  ]
+}
