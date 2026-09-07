@@ -5,8 +5,10 @@
   "excludeFolders": [".changeset"],
   "rules": [
     "For zod v4 import from 'zod-validation-error'. For zod v3 import from 'zod-validation-error/v3'. The two entry points are not interchangeable.",
-    "zod v4 uses the createErrorMap() factory, registered with zod.config({ customError: createErrorMap() }). zod v3 uses the static errorMap export, registered with zod.setErrorMap(errorMap). Neither the export nor the registration call is shared between them.",
+    "zod v4 exports the createErrorMap() factory. Register it with zod.config({ customError: createErrorMap() }).",
+    "zod v3 exports a static errorMap. Register it with zod.setErrorMap(errorMap). There is no createErrorMap on the v3 entry point.",
     "createMessageBuilder accepts forceTitleCase only on the zod v4 entry point.",
+    "On the zod v3 entry point, passing flat options such as maxIssuesInMessage or prefix directly to fromError is deprecated back-compat. Prefer messageBuilder.",
     "README.md documents the zod v4 API and README.v3.md documents the zod v3 API. Both are current. Never combine examples from the two."
   ]
 }
