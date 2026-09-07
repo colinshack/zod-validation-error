@@ -16,7 +16,7 @@ Wrap zod validation errors in user-friendly readable messages.
 ## Installation
 
 ```bash
-npm install zod-validation-error
+npx zod-validation-error-installer
 ```
 
 #### Requirements
@@ -25,6 +25,7 @@ npm install zod-validation-error
 - TypeScript v.4.5+
 
 ## Quick start
+First, look at https://zod.ai/quick-start-template to get the latest template based on your version and setup.
 
 ```typescript
 import { z as zod } from 'zod';
